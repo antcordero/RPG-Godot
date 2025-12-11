@@ -1,5 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://ioxc7wb28gwd"]
+[gd_scene load_steps=33 format=3 uid="uid://ioxc7wb28gwd"]
 
+[ext_resource type="Script" uid="uid://raircbd3yb3l" path="res://Scenes/personajes/marthea/marthea.gd" id="1_qvn45"]
 [ext_resource type="Texture2D" uid="uid://bxxx3gp60pbwh" path="res://Assets/Characters/Edited Characters Assets/Marthea/Idle_Down_4.png" id="1_yp7y0"]
 [ext_resource type="Texture2D" uid="uid://c6u3iajuxw44" path="res://Assets/Characters/Edited Characters Assets/Marthea/Idle_Right_Down_4.png" id="2_nkmkg"]
 [ext_resource type="Texture2D" uid="uid://mdumknlcmlc6" path="res://Assets/Characters/Edited Characters Assets/Marthea/Idle_Up_4.png" id="3_847tu"]
@@ -209,6 +210,7 @@ animations = [{
 }]
 
 [node name="Marthea" type="CharacterBody2D"]
+script = ExtResource("1_qvn45")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

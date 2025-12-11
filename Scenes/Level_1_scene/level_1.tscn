@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=4 uid="uid://bpdgiwkmvms02"]
 
 [ext_resource type="TileSet" uid="uid://b1tjvfw24v4ck" path="res://Tile_sets/library.tres" id="1_664i5"]
-[ext_resource type="PackedScene" uid="uid://c35vg1sqkf8ro" path="res://Scenes/anton.tscn" id="2_2o5ha"]
-[ext_resource type="PackedScene" uid="uid://ioxc7wb28gwd" path="res://Scenes/marthea.tscn" id="3_awet4"]
+[ext_resource type="PackedScene" uid="uid://c35vg1sqkf8ro" path="res://Scenes/personajes/anton/anton.tscn" id="2_2o5ha"]
+[ext_resource type="PackedScene" uid="uid://ioxc7wb28gwd" path="res://Scenes/personajes/marthea/marthea.tscn" id="3_awet4"]
 [ext_resource type="Texture2D" uid="uid://dl8iynnjfsxvl" path="res://Assets/TileMaps/Garden Environment/Assets/Tiles.png" id="4_awet4"]
 [ext_resource type="Texture2D" uid="uid://2r15bujmhbai" path="res://Assets/TileMaps/Castle Environment 0.3/Assets/Tiles.png" id="5_6vfmc"]
 
