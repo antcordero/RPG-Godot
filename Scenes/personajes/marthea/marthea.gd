@@ -1,34 +1,68 @@
 extends CharacterBody2D
 
-var speed := 200
+const SPEED = 40
+var current_dir = "none"
 
-func _physics_process(delta: float) -> void:
-	# Dirección (x,y) según las teclas de movimiento
-	var dir := Input.get_vector("left", "right", "up", "down")
-	velocity = dir * speed
+func _physics_process(delta):
+	player_movement(delta)
+
+func player_movement(delta):
+	if Input.is_action_pressed("ui_right"):
+		current_dir = "right"
+		player_animation(1)
+		velocity.x = SPEED
+		velocity.y = 0
+	elif Input.is_action_pressed("ui_left"):
+		current_dir = "left"
+		player_animation(1)
+		velocity.x = -SPEED
+		velocity.y = 0
+	elif Input.is_action_pressed("ui_down"):
+		current_dir = "down"
+		player_animation(1)
+		velocity.y = SPEED
+		velocity.x = 0
+	elif Input.is_action_pressed("ui_up"):
+		current_dir = "up"
+		player_animation(1)
+		velocity.y = -SPEED
+		velocity.x = 0
+	else:
+		velocity.x = 0
+		velocity.y = 0
+		player_animation(0) #idle
+	
 	move_and_slide()
 
-	_update_animation(dir)
-
-func _update_animation(dir: Vector2) -> void:
-	var anim := ""
-
-	if dir == Vector2.ZERO:
-		# Idle según la última dirección en la que nos movimos
-		if velocity.y > 0:
-			anim = "idle_down"
-		elif velocity.y < 0:
-			anim = "idle_up"
-		else:
-			anim = "idle_side"
-	else:
-		# Walk según dirección actual
-		if abs(dir.y) > abs(dir.x):
-			anim = "walk_down" if dir.y > 0 else "walk_up"
-		else:
-			anim = "walk_side"
-
-	$AnimatedSprite2D.play(anim)
-	# Volteo horizontal para izquierda/derecha
-	if anim.ends_with("_side"):
-		$AnimatedSprite2D.flip_h = dir.x < 0
+func player_animation(movement):
+	var direction = current_dir
+	var animation = $AnimatedSprite2D
+	
+	if direction == "right":
+		animation.flip_h = false
+		if movement == 1:
+			animation.play("walk_side")
+		elif movement == 0:
+			animation.play("idle_side")
+	
+	if direction == "left":
+		animation.flip_h = true
+		if movement == 1:
+			animation.play("walk_side")
+		elif movement == 0:
+			animation.play("idle_side")
+	
+	if direction == "down":
+		animation.flip_h = true
+		if movement == 1:
+			animation.play("walk_down")
+		elif movement == 0:
+			animation.play("idle_down")
+	
+	if direction == "up":
+		animation.flip_h = true
+		if movement == 1:
+			animation.play("walk_up")
+		elif movement == 0:
+			animation.play("idle_up")
+	

@@ -217,5 +217,5 @@ script = ExtResource("1_qvn45")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(26, 32)
 sprite_frames = SubResource("SpriteFrames_a863f")
-animation = &"walk_up"
-frame_progress = 0.78446966
+animation = &"idle_down"
+frame_progress = 0.4992606
