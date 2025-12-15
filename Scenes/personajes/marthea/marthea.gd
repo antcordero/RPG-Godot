@@ -66,3 +66,7 @@ func player_animation(movement):
 		elif movement == 0:
 			animation.play("idle_up")
 	
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("entered!")
