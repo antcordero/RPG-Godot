@@ -4849,5 +4849,3 @@ position = Vector2(885, 231)
 
 [node name="Marthea" parent="." instance=ExtResource("3_awet4")]
 position = Vector2(1588, 807)
-
-[node name="Camera2D" type="Camera2D" parent="Marthea"]

@@ -5,3 +5,4 @@
 [node name="EscenaPrincipal" type="Node2D"]
 
 [node name="Level_1_V2" parent="." instance=ExtResource("1_rstmp")]
+position = Vector2(13, 0)
