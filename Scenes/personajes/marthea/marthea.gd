@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 40
+const SPEED = 90
 var current_dir = "none"
 
 func _physics_process(delta):
@@ -66,3 +66,7 @@ func player_animation(movement):
 		elif movement == 0:
 			animation.play("idle_up")
 	
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("entered!")

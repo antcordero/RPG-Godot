@@ -380,5 +380,5 @@ animations = [{
 position = Vector2(25, 32)
 sprite_frames = SubResource("SpriteFrames_ajfva")
 animation = &"walk_up"
-frame_progress = 0.09598745
+frame_progress = 0.0959874
 metadata/_edit_group_ = true
