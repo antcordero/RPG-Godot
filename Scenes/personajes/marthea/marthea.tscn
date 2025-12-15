@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://ioxc7wb28gwd"]
+[gd_scene load_steps=34 format=3 uid="uid://ioxc7wb28gwd"]
 
 [ext_resource type="Script" uid="uid://raircbd3yb3l" path="res://Scenes/personajes/marthea/marthea.gd" id="1_qvn45"]
 [ext_resource type="Texture2D" uid="uid://bxxx3gp60pbwh" path="res://Assets/Characters/Edited Characters Assets/Marthea/Idle_Down_4.png" id="1_yp7y0"]
@@ -212,9 +212,6 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j662p"]
-size = Vector2(20, 23)
-
 [node name="Marthea" type="CharacterBody2D"]
 script = ExtResource("1_qvn45")
 
@@ -227,11 +224,3 @@ position = Vector2(26, 32)
 sprite_frames = SubResource("SpriteFrames_a863f")
 animation = &"idle_down"
 frame_progress = 0.499261
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(27, 31.5)
-shape = SubResource("RectangleShape2D_j662p")
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
