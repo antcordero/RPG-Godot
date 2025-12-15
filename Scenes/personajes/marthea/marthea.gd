@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 40
+const SPEED = 90
 var current_dir = "none"
 
 func _physics_process(delta):
