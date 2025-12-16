@@ -15,6 +15,10 @@ run/main_scene="uid://dp6nkup54tc6o"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[layer_names]
+
+2d_physics/layer_1="Sólido"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
