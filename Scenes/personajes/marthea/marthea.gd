@@ -8,7 +8,7 @@ func _physics_process(delta):
 
 #this is a comment
 #this is a comment made trough cmd :)
-
+#aaaand this is another comment, pretty cool right?
 func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
