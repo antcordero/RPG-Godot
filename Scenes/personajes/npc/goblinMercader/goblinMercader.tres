@@ -34,6 +34,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_3ebbh")
 }],
 "loop": true,
-"name": &"goblinMercader",
-"speed": 7.0
+"name": &"goblinMercader_idle",
+"speed": 8.0
 }]
