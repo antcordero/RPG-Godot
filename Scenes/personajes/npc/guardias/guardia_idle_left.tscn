@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://octcv1qf13t8"]
+
+[ext_resource type="SpriteFrames" uid="uid://dfabdxcbc71qp" path="res://Scenes/personajes/npc/guardias/guardia_idle_left.tres" id="1_oclmo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oclmo"]
+radius = 8.0
+
+[node name="guardia_idle_left" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(34, 33)
+sprite_frames = ExtResource("1_oclmo")
+animation = &"idle_left"
+frame_progress = 0.9375391
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(34, 51)
+shape = SubResource("CapsuleShape2D_oclmo")

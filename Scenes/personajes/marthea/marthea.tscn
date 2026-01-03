@@ -8,10 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dictf6ycd5k26" path="res://Assets/Characters/Edited Characters Assets/Marthea/walk_Right_Down.png" id="5_8plf7"]
 [ext_resource type="Texture2D" uid="uid://cqfvbp88lty12" path="res://Assets/Characters/Edited Characters Assets/Marthea/walk_Up.png" id="6_8r10w"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvn45"]
-radius = 6.0
-height = 12.0
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_jikfh"]
 atlas = ExtResource("1_yp7y0")
 region = Rect2(0, 0, 48, 64)
@@ -213,18 +209,22 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qvn45"]
+radius = 6.0
+height = 20.0
+
 [node name="Marthea" type="CharacterBody2D"]
 script = ExtResource("1_qvn45")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27, 36)
-shape = SubResource("CapsuleShape2D_qvn45")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(27, 32)
 sprite_frames = SubResource("SpriteFrames_a863f")
 animation = &"idle_down"
 frame_progress = 0.027120288
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, 33)
+shape = SubResource("CapsuleShape2D_qvn45")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(27, 32)
